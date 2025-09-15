@@ -1,0 +1,77 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f9ff"/>
+  
+  <!-- Modern coastal buildings -->
+  <rect x="60" y="130" width="60" height="140" fill="#0ea5e9"/>
+  <rect x="130" y="110" width="70" height="160" fill="#0284c7"/>
+  <rect x="210" y="120" width="65" height="150" fill="#0369a1"/>
+  <rect x="285" y="140" width="55" height="130" fill="#075985"/>
+  
+  <!-- Glass facades -->
+  <rect x="70" y="140" width="40" height="120" fill="#7dd3fc" opacity="0.7"/>
+  <rect x="140" y="120" width="50" height="140" fill="#7dd3fc" opacity="0.7"/>
+  <rect x="220" y="130" width="45" height="130" fill="#7dd3fc" opacity="0.7"/>
+  <rect x="295" y="150" width="35" height="110" fill="#7dd3fc" opacity="0.7"/>
+  
+  <!-- Window grid pattern -->
+  <g stroke="#0369a1" stroke-width="1" opacity="0.5">
+    <line x1="80" y1="150" x2="80" y2="250"/>
+    <line x1="90" y1="150" x2="90" y2="250"/>
+    <line x1="100" y1="150" x2="100" y2="250"/>
+    <line x1="70" y1="170" x2="110" y2="170"/>
+    <line x1="70" y1="190" x2="110" y2="190"/>
+    <line x1="70" y1="210" x2="110" y2="210"/>
+    <line x1="70" y1="230" x2="110" y2="230"/>
+    
+    <line x1="155" y1="130" x2="155" y2="260"/>
+    <line x1="165" y1="130" x2="165" y2="260"/>
+    <line x1="175" y1="130" x2="175" y2="260"/>
+    <line x1="140" y1="150" x2="190" y2="150"/>
+    <line x1="140" y1="170" x2="190" y2="170"/>
+    <line x1="140" y1="190" x2="190" y2="190"/>
+    <line x1="140" y1="210" x2="190" y2="210"/>
+    <line x1="140" y1="230" x2="190" y2="230"/>
+  </g>
+  
+  <!-- Ocean and beach -->
+  <rect x="0" y="270" width="400" height="30" fill="#fbbf24"/>
+  <path d="M0 260 Q100 250 200 255 T400 250 L400 270 L0 270 Z" fill="#06b6d4"/>
+  
+  <!-- Waves -->
+  <path d="M0 265 Q50 260 100 265 T200 265 T300 265 T400 265" stroke="#0891b2" stroke-width="2" fill="none"/>
+  <path d="M0 268 Q40 263 80 268 T160 268 T240 268 T320 268 T400 268" stroke="#0891b2" stroke-width="1" fill="none" opacity="0.7"/>
+  
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="sdSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#sdSkyGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="50" r="30" fill="#fbbf24"/>
+  <g stroke="#fbbf24" stroke-width="3">
+    <line x1="350" y1="10" x2="350" y2="25"/>
+    <line x1="350" y1="75" x2="350" y2="90"/>
+    <line x1="310" y1="50" x2="325" y2="50"/>
+    <line x1="375" y1="50" x2="390" y2="50"/>
+    <line x1="325" y1="25" x2="335" y2="35"/>
+    <line x1="365" y1="65" x2="375" y2="75"/>
+    <line x1="375" y1="25" x2="365" y2="35"/>
+    <line x1="335" y1="65" x2="325" y2="75"/>
+  </g>
+  
+  <!-- Palm trees -->
+  <rect x="25" y="220" width="6" height="50" fill="#92400e"/>
+  <ellipse cx="28" cy="215" rx="15" ry="8" fill="#16a34a"/>
+  <ellipse cx="28" cy="210" rx="12" ry="6" fill="#15803d"/>
+  
+  <rect x="370" y="230" width="5" height="40" fill="#92400e"/>
+  <ellipse cx="372" cy="225" rx="12" ry="6" fill="#16a34a"/>
+  <ellipse cx="372" cy="220" rx="10" ry="5" fill="#15803d"/>
+  
+  <!-- Text overlay -->
+  <text x="200" y="40" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="bold">San Diego</text>
+</svg>

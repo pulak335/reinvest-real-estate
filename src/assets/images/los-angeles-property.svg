@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <!-- Modern building silhouette -->
+  <rect x="50" y="120" width="80" height="150" fill="#6b7280"/>
+  <rect x="140" y="80" width="90" height="190" fill="#4b5563"/>
+  <rect x="240" y="100" width="85" height="170" fill="#374151"/>
+  <rect x="335" y="140" width="50" height="130" fill="#6b7280"/>
+  
+  <!-- Windows -->
+  <rect x="60" y="140" width="8" height="12" fill="#fbbf24"/>
+  <rect x="75" y="140" width="8" height="12" fill="#fbbf24"/>
+  <rect x="90" y="140" width="8" height="12" fill="#fbbf24"/>
+  <rect x="105" y="140" width="8" height="12" fill="#fbbf24"/>
+  
+  <rect x="155" y="100" width="10" height="15" fill="#60a5fa"/>
+  <rect x="175" y="100" width="10" height="15" fill="#60a5fa"/>
+  <rect x="195" y="100" width="10" height="15" fill="#60a5fa"/>
+  <rect x="215" y="100" width="10" height="15" fill="#60a5fa"/>
+  
+  <rect x="255" y="120" width="12" height="18" fill="#34d399"/>
+  <rect x="275" y="120" width="12" height="18" fill="#34d399"/>
+  <rect x="295" y="120" width="12" height="18" fill="#34d399"/>
+  
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" fill="url(#skyGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="320" cy="40" r="25" fill="#fbbf24"/>
+  
+  <!-- Text overlay -->
+  <text x="200" y="50" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Los Angeles</text>
+</svg>

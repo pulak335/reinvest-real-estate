@@ -1,0 +1,85 @@
+{
+  "marketOverview": {
+    "totalProperties": 5,
+    "totalValue": 3190000,
+    "averagePrice": 638000,
+    "averageReturn": 8.42,
+    "totalMonthlyRent": 22200,
+    "totalAnnualIncome": 266400,
+    "averageCashFlow": 1420
+  },
+  "marketTrends": {
+    "priceGrowth": {
+      "lastMonth": 2.3,
+      "lastQuarter": 5.8,
+      "lastYear": 12.4
+    },
+    "rentGrowth": {
+      "lastMonth": 1.8,
+      "lastQuarter": 4.2,
+      "lastYear": 8.9
+    },
+    "demandIndex": 78,
+    "supplyIndex": 45
+  },
+  "cityMetrics": [
+    {
+      "city": "New York",
+      "state": "NY",
+      "averagePrice": 450000,
+      "pricePerSqFt": 375,
+      "rentYield": 8.5,
+      "appreciation": 11.2,
+      "marketScore": 85
+    },
+    {
+      "city": "Austin",
+      "state": "TX",
+      "averagePrice": 650000,
+      "pricePerSqFt": 271,
+      "rentYield": 7.8,
+      "appreciation": 15.3,
+      "marketScore": 92
+    },
+    {
+      "city": "Miami",
+      "state": "FL",
+      "averagePrice": 850000,
+      "pricePerSqFt": 472,
+      "rentYield": 9.2,
+      "appreciation": 18.7,
+      "marketScore": 88
+    },
+    {
+      "city": "Denver",
+      "state": "CO",
+      "averagePrice": 520000,
+      "pricePerSqFt": 163,
+      "rentYield": 11.1,
+      "appreciation": 13.9,
+      "marketScore": 90
+    },
+    {
+      "city": "Boston",
+      "state": "MA",
+      "averagePrice": 720000,
+      "pricePerSqFt": 343,
+      "rentYield": 7.5,
+      "appreciation": 9.8,
+      "marketScore": 82
+    }
+  ],
+  "investmentMetrics": {
+    "portfolioValue": 3190000,
+    "totalEquity": 1595000,
+    "totalDebt": 1595000,
+    "monthlyIncome": 22200,
+    "monthlyExpenses": 15100,
+    "netCashFlow": 7100,
+    "roi": 8.42,
+    "capRate": 7.64,
+    "cashOnCashReturn": 13.2,
+    "debtServiceCoverage": 1.47
+  },
+  "lastUpdated": "2024-01-30T10:30:00Z"
+}

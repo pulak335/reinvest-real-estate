@@ -28,25 +28,25 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
 
-              <Link href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+              <Link href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Home
               </Link>
 
-              <Link href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+              <Link href="/properties" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Properties
               </Link>
 
-              <Link href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+              <Link href="/loans" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Loan
               </Link>
       
               
-              <Link href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+              <Link href="/list-property" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">  
                 List your property
               </Link>
               
               
-              <Link href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+              <Link href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Contact
               </Link>
             </div>
@@ -91,10 +91,10 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/90 backdrop-blur-sm border-t border-white/20">
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+            <Link href="/" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Home
             </Link>
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+            <Link href="/properties" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Properties
             </Link>
             <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">

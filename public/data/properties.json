@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "title": "Los Angeles",
+    "type": "Commercial",
+    "price": 4940000,
+    "location": "Los Angeles",
+    "address": {
+      "street": "8706 Herrick Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90035",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 5000,
+      "yearBuilt": 2015,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 119,
+      "totalInvestment": 4940000,
+      "annualReturn": "7.5% + 3%",
+      "returnPercentage": 54.73,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flos.771df261.png&w=640&q=75"
+    ],
+    "description": "Prime commercial property in Los Angeles with excellent investment potential and high returns.",
+    "amenities": ["Commercial Space", "High Traffic Area", "Modern Facilities"],
+    "status": "available",
+    "listedDate": "2024-01-15",
+    "agent": {
+      "name": "Sarah Johnson",
+      "phone": "+1-555-0123",
+      "email": "sarah.johnson@realestate.com"
+    }
+  },
+  {
+    "id": 2,
+    "title": "San Francisco, CA",
+    "type": "Commercial",
+    "price": 1640000,
+    "location": "San Francisco",
+    "address": {
+      "street": "3335 21 St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94110",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 3200,
+      "yearBuilt": 2018,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 179,
+      "totalInvestment": 1640000,
+      "annualReturn": "3.5% + 6%",
+      "returnPercentage": 64.73,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsan.048c8e2c.png&w=640&q=75"
+    ],
+    "description": "Premium commercial property in San Francisco with excellent location and strong investment returns.",
+    "amenities": ["Prime Location", "Modern Design", "High ROI"],
+    "status": "available",
+    "listedDate": "2024-01-20",
+    "agent": {
+      "name": "Michael Chen",
+      "phone": "+1-555-0456",
+      "email": "michael.chen@realestate.com"
+    }
+  },
+  {
+    "id": 3,
+    "title": "The Weldon",
+    "type": "Commercial",
+    "price": 4640000,
+    "location": "Gastonia, NC",
+    "address": {
+      "street": "Gastonia",
+      "city": "Gastonia",
+      "state": "NC",
+      "zipCode": "28052",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 4500,
+      "yearBuilt": 2019,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 579,
+      "totalInvestment": 4640000,
+      "annualReturn": "2.5% + 2%",
+      "returnPercentage": 74.33,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fweldon.314147fc.png&w=640&q=75"
+    ],
+    "description": "The Weldon - Premium commercial investment opportunity in Gastonia, NC with strong returns.",
+    "amenities": ["Commercial Space", "Prime Location", "High Returns"],
+    "status": "available",
+    "listedDate": "2024-01-10",
+    "agent": {
+      "name": "Elena Rodriguez",
+      "phone": "+1-555-0789",
+      "email": "elena.rodriguez@realestate.com"
+    }
+  },
+  {
+    "id": 4,
+    "title": "The Lily",
+    "type": "Residential",
+    "price": 1140000,
+    "location": "Colorado Springs, CO",
+    "address": {
+      "street": "Colorado Springs",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zipCode": "80903",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 2800,
+      "yearBuilt": 2017,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 359,
+      "totalInvestment": 1140000,
+      "annualReturn": "7.5% + 3%",
+      "returnPercentage": 54.73,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flily.314147fc.png&w=640&q=75"
+    ],
+    "description": "The Lily - Premium residential investment opportunity in Colorado Springs with excellent returns.",
+    "amenities": ["Modern Design", "Prime Location", "High ROI"],
+    "status": "available",
+    "listedDate": "2024-01-25",
+    "agent": {
+      "name": "David Thompson",
+      "phone": "+1-555-0321",
+      "email": "david.thompson@realestate.com"
+    }
+  },
+  {
+    "id": 5,
+    "title": "San Francisco, CA",
+    "type": "Commercial",
+    "price": 1640000,
+    "location": "San Francisco",
+    "address": {
+      "street": "3335 21 St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94110",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 3200,
+      "yearBuilt": 2018,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 179,
+      "totalInvestment": 1640000,
+      "annualReturn": "3.5% + 6%",
+      "returnPercentage": 64.73,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsan.048c8e2c.png&w=640&q=75"
+    ],
+    "description": "Premium commercial property in San Francisco with excellent location and strong investment returns.",
+    "amenities": ["Prime Location", "Modern Design", "High ROI"],
+    "status": "available",
+    "listedDate": "2024-01-18",
+    "agent": {
+      "name": "Jennifer Walsh",
+      "phone": "+1-555-0654",
+      "email": "jennifer.walsh@realestate.com"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Los Angeles",
+    "type": "Residential",
+    "price": 4940000,
+    "location": "Los Angeles",
+    "address": {
+      "street": "8706 Herrick Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90035",
+      "country": "USA"
+    },
+    "details": {
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "squareFeet": 5000,
+      "yearBuilt": 2015,
+      "parking": true,
+      "furnished": false
+    },
+    "investment": {
+      "investors": 119,
+      "totalInvestment": 4940000,
+      "annualReturn": "7.5% + 3%",
+      "returnPercentage": 54.73,
+      "timeLeft": "115D:17H:33M"
+    },
+    "images": [
+      "https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flos.771df261.png&w=640&q=75"
+    ],
+    "description": "Prime residential property in Los Angeles with excellent investment potential and high returns.",
+    "amenities": ["Residential Space", "High Traffic Area", "Modern Facilities"],
+    "status": "available",
+    "listedDate": "2024-01-22",
+    "agent": {
+      "name": "Robert Kim",
+      "phone": "+1-555-0987",
+      "email": "robert.kim@realestate.com"
+    }
+  }
+]

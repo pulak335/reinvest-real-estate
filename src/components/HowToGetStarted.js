@@ -29,9 +29,9 @@ const HowToGetStarted = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-purple-600 font-medium mb-2 font-body">We're changing the way you invest.</p>
+          <p className="text-purple-600 font-medium mb-2 font-body">We&apos;re changing the way you invest.</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-heading">
-            It's Easy to Get Started.
+            It&apos;s Easy to Get Started.
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto font-body">
             Starting with steps based on secure and risk-tolerant free strategies, our cryptocurrency content 

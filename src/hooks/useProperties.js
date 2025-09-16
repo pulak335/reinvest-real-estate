@@ -28,19 +28,22 @@ export const useProperties = () => {
   const loadProperties = useCallback(async () => {
     try {
       dispatch(setLoading(true));
+      dispatch(clearError());
       
-      // In a real application, this would be an API call
-      // For now, we'll simulate loading from our JSON data
-      const response = await fetch('/data/properties.json');
+      const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3001';
+      const apiUrl = `${baseUrl}/api/properties`;
+      const response = await fetch(apiUrl);
       
       if (!response.ok) {
-        throw new Error('Failed to load properties');
+        throw new Error(`Failed to load properties: ${response.status} ${response.statusText}`);
       }
       
       const data = await response.json();
       dispatch(setProperties(data));
+      dispatch(setLoading(false));
     } catch (err) {
       dispatch(setError(err.message));
+      dispatch(setLoading(false));
     }
   }, [dispatch]);
 

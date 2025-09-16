@@ -119,7 +119,7 @@ const Footer = () => {
               <p className="text-gray-400 text-sm font-body">
                 Copyright © Revest | Designed by
               </p>
-              <Link href="#" className="text-purple-400 hover:text-purple-300 text-sm transition-colors duration-200 font-body">Webflow</Link>
+              <Link href="https://intelligentdive.com/" className="text-purple-400 hover:text-purple-300 text-sm transition-colors duration-200 font-body">Intelligent Dive</Link>
             </div>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <div className="flex items-center space-x-2">

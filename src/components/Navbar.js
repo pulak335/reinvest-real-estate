@@ -1,14 +1,31 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const { user, isAuthenticated, logout, checkAuth } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleUserMenu = () => {
+    setShowUserMenu(!showUserMenu);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    setShowUserMenu(false);
+  };
+
+  // Check authentication status on component mount
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
 
   return (
     <nav className="bg-white/50 sticky top-0 z-100 backdrop-blur-sm shadow-sm border-b border-white/20">
@@ -54,19 +71,64 @@ const Navbar = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link 
-            href="/login"
-            className="text-gray-700 hover:text-purple-600 px-4 py-2 text-sm font-medium">
-              Log In
-            </Link>
-            <Link
-             href="/register"
-             className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-sm font-medium flex items-center">
-              Join Now
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            {isAuthenticated && user ? (
+              <div className="relative">
+                <button
+                  onClick={toggleUserMenu}
+                  className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 px-4 py-2 text-sm font-medium"
+                >
+                  <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                    {user.firstName?.charAt(0)}{user.lastName?.charAt(0)}
+                  </div>
+                  <span>{user.firstName} {user.lastName}</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {showUserMenu && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                    <div className="px-4 py-3 border-b border-gray-200">
+                      <p className="text-sm font-medium text-gray-900">{user.firstName} {user.lastName}</p>
+                      <p className="text-xs text-purple-600 capitalize">{user.type} Account</p>
+                    </div>
+                    <div className="py-1">
+                      <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Profile
+                      </Link>
+                      <Link href="/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Dashboard
+                      </Link>
+                      <Link href="/settings" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Settings
+                      </Link>
+                      <button
+                        onClick={handleLogout}
+                        className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
+                      >
+                        Sign Out
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                <Link 
+                  href="/login"
+                  className="text-gray-700 hover:text-purple-600 px-4 py-2 text-sm font-medium">
+                  Log In
+                </Link>
+                <Link
+                  href="/register"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-sm font-medium flex items-center">
+                  Join Now
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -97,26 +159,54 @@ const Navbar = () => {
             <Link href="/properties" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Properties
             </Link>
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+            <Link href="/loans" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Loan
             </Link>
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+            <Link href="/list-property" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               List your property
             </Link>
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
-              Pages
-            </Link>
-            <Link href="#" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+            <Link href="/contact" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Contact
             </Link>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-3 space-y-2 flex-col">
-                <button className="text-gray-700 hover:text-purple-600 w-full text-left py-2 text-base font-medium">
-                  Log In
-                </button>
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-base font-medium w-full">
-                  Join Now
-                </button>
+                {isAuthenticated && user ? (
+                  <>
+                    <div className="flex items-center space-x-3 w-full py-2">
+                      <div className="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        {user.firstName?.charAt(0)}{user.lastName?.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{user.firstName} {user.lastName}</p>
+                        <p className="text-xs text-purple-600 capitalize">{user.type} Account</p>
+                      </div>
+                    </div>
+                    <Link href="/profile" className="text-gray-700 hover:text-purple-600 w-full text-left py-2 text-base font-medium">
+                      Profile
+                    </Link>
+                    <Link href="/dashboard" className="text-gray-700 hover:text-purple-600 w-full text-left py-2 text-base font-medium">
+                      Dashboard
+                    </Link>
+                    <Link href="/settings" className="text-gray-700 hover:text-purple-600 w-full text-left py-2 text-base font-medium">
+                      Settings
+                    </Link>
+                    <button 
+                      onClick={handleLogout}
+                      className="text-red-600 hover:text-red-700 w-full text-left py-2 text-base font-medium"
+                    >
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/login" className="text-gray-700 hover:text-purple-600 w-full text-left py-2 text-base font-medium">
+                      Log In
+                    </Link>
+                    <Link href="/register" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-base font-medium w-full text-center">
+                      Join Now
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>

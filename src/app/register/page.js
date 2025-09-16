@@ -124,7 +124,6 @@ export default function RegisterPage() {
                 >
                   <option value="particular">Particular</option>
                   <option value="individual">Individual</option>
-                  <option value="business">Business</option>
                   <option value="investor">Investor</option>
                 </select>
                 <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">

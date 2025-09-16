@@ -1,7 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useAuth } from '@/hooks/useAuth';
+import ProtectedRoute from '@/components/ProtectedRoute';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -10,9 +11,15 @@ export default function LoginPage() {
     rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const router = useRouter();
+  const { login, loading, error, isAuthenticated, clearError } = useAuth();
+
+
+
+  // Clear auth errors when component mounts
+  useEffect(() => {
+    clearError();
+  }, [clearError]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -50,21 +57,13 @@ export default function LoginPage() {
     
     if (!validateForm()) return;
     
-    setIsLoading(true);
+    const result = await login(formData.email, formData.password);
     
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For demo purposes, accept any valid email/password
-      console.log('Login attempt:', formData);
-      
+    if (result.success) {
       // Redirect to dashboard or home page
-      router.push('/');
-    } catch (error) {
-      setErrors({ submit: 'Login failed. Please try again.' });
-    } finally {
-      setIsLoading(false);
+      window.location.href = '/';
+    } else {
+      setErrors({ submit: result.error || 'Login failed. Please try again.' });
     }
   };
 
@@ -74,7 +73,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <ProtectedRoute requireAuth={false}>
+      <div className="min-h-screen flex">
       {/* Left Side - Login Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-purple-50">
         <div className="max-w-md w-full space-y-8">
@@ -129,9 +129,9 @@ export default function LoginPage() {
 
           {/* Login Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
-            {errors.submit && (
+            {(errors.submit || error) && (
               <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
-                {errors.submit}
+                {errors.submit || error}
               </div>
             )}
 
@@ -216,10 +216,10 @@ export default function LoginPage() {
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={loading}
               className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              {isLoading ? (
+              {loading ? (
                 <div className="flex items-center">
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -302,5 +302,6 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+    </ProtectedRoute>
   );
 }

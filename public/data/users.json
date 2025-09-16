@@ -1,0 +1,354 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "type": "particular",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@email.com",
+      "password": "123456",
+      "phone": "+1-555-0123",
+      "dateOfBirth": "1985-03-15",
+      "address": {
+        "street": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Software Engineer",
+        "annualIncome": 85000,
+        "investmentExperience": "Beginner",
+        "riskTolerance": "Moderate",
+        "investmentGoals": ["Long-term growth", "Passive income"]
+      },
+      "accountDetails": {
+        "accountBalance": 15000,
+        "totalInvested": 25000,
+        "portfolioValue": 28500,
+        "joinDate": "2023-06-15",
+        "kycStatus": "Verified",
+        "accountStatus": "Active"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP001",
+          "investmentAmount": 10000,
+          "investmentDate": "2023-07-01",
+          "currentValue": 11200,
+          "monthlyReturn": 120
+        },
+        {
+          "propertyId": "PROP005",
+          "investmentAmount": 15000,
+          "investmentDate": "2023-09-15",
+          "currentValue": 17300,
+          "monthlyReturn": 180
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "individual",
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "sarah.johnson@email.com",
+      "password": "123456",
+      "phone": "+1-555-0456",
+      "dateOfBirth": "1978-11-22",
+      "address": {
+        "street": "456 Oak Avenue",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90210",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Marketing Director",
+        "annualIncome": 120000,
+        "investmentExperience": "Intermediate",
+        "riskTolerance": "Moderate-High",
+        "investmentGoals": ["Diversification", "Retirement planning", "Wealth building"]
+      },
+      "accountDetails": {
+        "accountBalance": 45000,
+        "totalInvested": 75000,
+        "portfolioValue": 82500,
+        "joinDate": "2022-11-08",
+        "kycStatus": "Verified",
+        "accountStatus": "Active"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP002",
+          "investmentAmount": 25000,
+          "investmentDate": "2023-01-15",
+          "currentValue": 28750,
+          "monthlyReturn": 312
+        },
+        {
+          "propertyId": "PROP003",
+          "investmentAmount": 30000,
+          "investmentDate": "2023-04-20",
+          "currentValue": 33600,
+          "monthlyReturn": 420
+        },
+        {
+          "propertyId": "PROP007",
+          "investmentAmount": 20000,
+          "investmentDate": "2023-08-10",
+          "currentValue": 20150,
+          "monthlyReturn": 250
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "investor",
+      "firstName": "Michael",
+      "lastName": "Chen",
+      "email": "michael.chen@investment.com",
+      "password": "123456",
+      "phone": "+1-555-0789",
+      "dateOfBirth": "1972-08-05",
+      "address": {
+        "street": "789 Investment Plaza",
+        "city": "Chicago",
+        "state": "IL",
+        "zipCode": "60601",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Investment Advisor",
+        "annualIncome": 250000,
+        "investmentExperience": "Expert",
+        "riskTolerance": "High",
+        "investmentGoals": ["Portfolio diversification", "High returns", "Market expansion"]
+      },
+      "accountDetails": {
+        "accountBalance": 150000,
+        "totalInvested": 500000,
+        "portfolioValue": 575000,
+        "joinDate": "2022-03-12",
+        "kycStatus": "Verified",
+        "accountStatus": "Premium"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP001",
+          "investmentAmount": 100000,
+          "investmentDate": "2022-05-01",
+          "currentValue": 118000,
+          "monthlyReturn": 1200
+        },
+        {
+          "propertyId": "PROP004",
+          "investmentAmount": 150000,
+          "investmentDate": "2022-08-15",
+          "currentValue": 172500,
+          "monthlyReturn": 1875
+        },
+        {
+          "propertyId": "PROP006",
+          "investmentAmount": 125000,
+          "investmentDate": "2023-02-10",
+          "currentValue": 143750,
+          "monthlyReturn": 1562
+        },
+        {
+          "propertyId": "PROP008",
+          "investmentAmount": 125000,
+          "investmentDate": "2023-06-25",
+          "currentValue": 140750,
+          "monthlyReturn": 1406
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "particular",
+      "firstName": "Emily",
+      "lastName": "Davis",
+      "email": "emily.davis@email.com",
+      "password": "emily123",
+      "phone": "+1-555-0234",
+      "dateOfBirth": "1990-12-08",
+      "address": {
+        "street": "321 Pine Street",
+        "city": "Seattle",
+        "state": "WA",
+        "zipCode": "98101",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Graphic Designer",
+        "annualIncome": 65000,
+        "investmentExperience": "Beginner",
+        "riskTolerance": "Low-Moderate",
+        "investmentGoals": ["Emergency fund growth", "First home down payment"]
+      },
+      "accountDetails": {
+        "accountBalance": 8000,
+        "totalInvested": 12000,
+        "portfolioValue": 13200,
+        "joinDate": "2023-09-20",
+        "kycStatus": "Verified",
+        "accountStatus": "Active"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP009",
+          "investmentAmount": 12000,
+          "investmentDate": "2023-10-01",
+          "currentValue": 13200,
+          "monthlyReturn": 144
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "individual",
+      "firstName": "Robert",
+      "lastName": "Wilson",
+      "email": "robert.wilson@email.com",
+      "password": "123456",
+      "phone": "+1-555-0567",
+      "dateOfBirth": "1983-04-18",
+      "address": {
+        "street": "654 Elm Drive",
+        "city": "Miami",
+        "state": "FL",
+        "zipCode": "33101",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Financial Analyst",
+        "annualIncome": 95000,
+        "investmentExperience": "Intermediate",
+        "riskTolerance": "Moderate",
+        "investmentGoals": ["Passive income", "Tax benefits", "Long-term wealth"]
+      },
+      "accountDetails": {
+        "accountBalance": 25000,
+        "totalInvested": 55000,
+        "portfolioValue": 61050,
+        "joinDate": "2023-01-30",
+        "kycStatus": "Verified",
+        "accountStatus": "Active"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP003",
+          "investmentAmount": 20000,
+          "investmentDate": "2023-03-15",
+          "currentValue": 22800,
+          "monthlyReturn": 280
+        },
+        {
+          "propertyId": "PROP010",
+          "investmentAmount": 35000,
+          "investmentDate": "2023-07-05",
+          "currentValue": 38250,
+          "monthlyReturn": 437
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "investor",
+      "firstName": "Jennifer",
+      "lastName": "Martinez",
+      "email": "jennifer.martinez@realestate.com",
+      "password": "123456",
+      "phone": "+1-555-0890",
+      "dateOfBirth": "1975-09-30",
+      "address": {
+        "street": "987 Capital Boulevard",
+        "city": "Austin",
+        "state": "TX",
+        "zipCode": "73301",
+        "country": "USA"
+      },
+      "profile": {
+        "occupation": "Real Estate Developer",
+        "annualIncome": 350000,
+        "investmentExperience": "Expert",
+        "riskTolerance": "High",
+        "investmentGoals": ["Market expansion", "High yield returns", "Portfolio optimization"]
+      },
+      "accountDetails": {
+        "accountBalance": 200000,
+        "totalInvested": 750000,
+        "portfolioValue": 862500,
+        "joinDate": "2021-12-05",
+        "kycStatus": "Verified",
+        "accountStatus": "Premium"
+      },
+      "investments": [
+        {
+          "propertyId": "PROP002",
+          "investmentAmount": 200000,
+          "investmentDate": "2022-02-20",
+          "currentValue": 240000,
+          "monthlyReturn": 2500
+        },
+        {
+          "propertyId": "PROP005",
+          "investmentAmount": 175000,
+          "investmentDate": "2022-06-10",
+          "currentValue": 201250,
+          "monthlyReturn": 2187
+        },
+        {
+          "propertyId": "PROP011",
+          "investmentAmount": 225000,
+          "investmentDate": "2023-01-08",
+          "currentValue": 258750,
+          "monthlyReturn": 2812
+        },
+        {
+          "propertyId": "PROP012",
+          "investmentAmount": 150000,
+          "investmentDate": "2023-05-15",
+          "currentValue": 162500,
+          "monthlyReturn": 1875
+        }
+      ]
+    }
+  ],
+  "userTypes": {
+    "particular": {
+      "description": "Individual users looking for personal real estate investments",
+      "minInvestment": 5000,
+      "maxInvestment": 50000,
+      "features": ["Basic portfolio tracking", "Monthly reports", "Customer support"]
+    },
+    "individual": {
+      "description": "Private investors with moderate investment capacity",
+      "minInvestment": 10000,
+      "maxInvestment": 100000,
+      "features": ["Advanced analytics", "Quarterly reviews", "Priority support", "Tax reporting"]
+    },
+    "investor": {
+      "description": "Professional investors and institutions with high investment capacity",
+      "minInvestment": 50000,
+      "maxInvestment": 1000000,
+      "features": ["Premium analytics", "Dedicated account manager", "Custom reporting", "Early access to deals", "Bulk investment options"]
+    }
+  },
+  "statistics": {
+    "totalUsers": 6,
+    "usersByType": {
+      "particular": 2,
+      "individual": 2,
+      "investor": 2
+    },
+    "totalInvestments": 1417000,
+    "averageInvestmentByType": {
+      "particular": 13500,
+      "individual": 55000,
+      "investor": 625000
+    }
+  }
+}

@@ -1,8 +1,10 @@
 'use client';
 
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 const PropertyCard = ({ property }) => {
+  const router = useRouter();
   const {
     id,
     title,
@@ -15,6 +17,14 @@ const PropertyCard = ({ property }) => {
   } = property;
 
   const progressPercentage = investment?.returnPercentage || 0;
+
+  const handleInvestNow = () => {
+    router.push(`/properties/${id}`);
+  };
+
+  const handleDetails = () => {
+    router.push(`/properties/${id}`);
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -85,10 +95,16 @@ const PropertyCard = ({ property }) => {
 
         {/* Action Buttons */}
         <div className="flex gap-3">
-          <button className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200">
+          <button 
+            onClick={handleInvestNow}
+            className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200"
+          >
             Invest Now
           </button>
-          <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <button 
+            onClick={handleDetails}
+            className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+          >
             Details
           </button>
         </div>

@@ -86,9 +86,11 @@ const LoanCard = ({ loan }) => {
             </p>
           </div>
           <div className="flex gap-2">
-            <button className="px-4 py-2 text-purple-600 border border-purple-600 rounded-md hover:bg-purple-50 transition-colors text-sm font-medium">
-              Invest Now
-            </button>
+            <Link href={`/loans/${loan.id}`}>
+              <button className="px-4 py-2 text-purple-600 border border-purple-600 rounded-md hover:bg-purple-50 transition-colors text-sm font-medium">
+                Invest Now
+              </button>
+            </Link>
           </div>
         </div>
         

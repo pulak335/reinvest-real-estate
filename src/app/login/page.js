@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -74,6 +76,7 @@ export default function LoginPage() {
 
   return (
     <ProtectedRoute requireAuth={false}>
+      <Navbar/>
       <div className="min-h-screen flex">
       {/* Left Side - Login Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-purple-50">
@@ -302,6 +305,7 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+    <Footer/> 
     </ProtectedRoute>
   );
 }

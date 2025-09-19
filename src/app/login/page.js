@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: '',
+    emailOrUsername: '',
     password: '',
     rememberMe: false
   });
@@ -38,10 +38,18 @@ export default function LoginPage() {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+    if (!formData.emailOrUsername) {
+      newErrors.emailOrUsername = 'Email or username is required';
+    } else if (formData.emailOrUsername.includes('@')) {
+      // If it contains @, validate as email
+      if (!/\S+@\S+\.\S+/.test(formData.emailOrUsername)) {
+        newErrors.emailOrUsername = 'Please enter a valid email address';
+      }
+    } else {
+      // If it doesn't contain @, validate as username
+      if (formData.emailOrUsername.length < 3) {
+        newErrors.emailOrUsername = 'Username must be at least 3 characters';
+      }
     }
     
     if (!formData.password) {
@@ -59,7 +67,7 @@ export default function LoginPage() {
     
     if (!validateForm()) return;
     
-    const result = await login(formData.email, formData.password);
+    const result = await login(formData.emailOrUsername, formData.password);
     
     if (result.success) {
       // Redirect to dashboard or home page
@@ -139,22 +147,22 @@ export default function LoginPage() {
             )}
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-purple-700 mb-2">
-                Email Address
+              <label htmlFor="emailOrUsername" className="block text-sm font-medium text-purple-700 mb-2">
+                Email Address or Username
               </label>
               <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
+                id="emailOrUsername"
+                name="emailOrUsername"
+                type="text"
+                value={formData.emailOrUsername}
                 onChange={handleInputChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors ${
-                  errors.email ? 'border-red-300' : 'border-purple-300'
+                  errors.emailOrUsername ? 'border-red-300' : 'border-purple-300'
                 }`}
-                placeholder="Enter your email address"
+                placeholder="Enter your email address or username"
               />
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+              {errors.emailOrUsername && (
+                <p className="mt-1 text-sm text-red-600">{errors.emailOrUsername}</p>
               )}
             </div>
 

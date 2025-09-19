@@ -11,10 +11,12 @@ import Footer from '@/components/Footer';
 const PropertiesPage = () => {
   const { properties, loading, error, loadProperties } = useProperties();
   
-  // Load properties when needed
-  if (properties.length === 0 && !loading && !error) {
-    loadProperties();
-  }
+  // Load properties on component mount
+  useEffect(() => {
+    if (properties.length === 0 && !loading && !error) {
+      loadProperties();
+    }
+  }, [properties.length, loading, error, loadProperties]);
   
   const [filters, setFilters] = useState({
     location: '',

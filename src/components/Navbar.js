@@ -7,7 +7,7 @@ import { useAuth } from '@/hooks/useAuth';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const { user, isAuthenticated, logout, checkAuth } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,11 +21,6 @@ const Navbar = () => {
     await logout();
     setShowUserMenu(false);
   };
-
-  // Check authentication status on component mount
-  useEffect(() => {
-    checkAuth();
-  }, [checkAuth]);
 
   return (
     <nav className="bg-white/50 sticky top-0 z-100 backdrop-blur-sm shadow-sm border-b border-white/20">

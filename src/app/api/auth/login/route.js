@@ -4,12 +4,12 @@ import path from 'path';
 
 export async function POST(request) {
   try {
-    const { email, password } = await request.json();
+    const { emailOrUsername, password } = await request.json();
 
     // Validate input
-    if (!email || !password) {
+    if (!emailOrUsername || !password) {
       return NextResponse.json(
-        { error: 'Email and password are required' },
+        { error: 'Email/Username and password are required' },
         { status: 400 }
       );
     }
@@ -18,12 +18,16 @@ export async function POST(request) {
     const usersFilePath = path.join(process.cwd(), 'public', 'data', 'users.json');
     const usersData = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
     
-    // Find user by email
-    const user = usersData.users.find(u => u.email.toLowerCase() === email.toLowerCase());
+    // Find user by email or username
+    const user = usersData.users.find(u => {
+      const emailMatch = u.email.toLowerCase() === emailOrUsername.toLowerCase();
+      const usernameMatch = u.username && u.username.toLowerCase() === emailOrUsername.toLowerCase();
+      return emailMatch || usernameMatch;
+    });
     
     if (!user) {
       return NextResponse.json(
-        { error: 'Invalid email or password' },
+        { error: 'Invalid email/username or password' },
         { status: 401 }
       );
     }
@@ -31,7 +35,7 @@ export async function POST(request) {
     // Check password (in production, use proper password hashing)
     if (user.password !== password) {
       return NextResponse.json(
-        { error: 'Invalid email or password' },
+        { error: 'Invalid email/username or password' },
         { status: 401 }
       );
     }

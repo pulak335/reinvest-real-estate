@@ -25,7 +25,7 @@ export const useAuth = () => {
   } = useSelector((state) => state.auth);
 
   // Login function
-  const login = useCallback(async (email, password) => {
+  const login = useCallback(async (emailOrUsername, password) => {
     try {
       dispatch(loginStart());
       
@@ -34,7 +34,7 @@ export const useAuth = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ emailOrUsername, password }),
       });
 
       const data = await response.json();

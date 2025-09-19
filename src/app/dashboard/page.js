@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Link from 'next/link';
@@ -21,6 +22,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 
 const DashboardPage = () => {
   const { user, logout } = useAuth();
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [dashboardData, setDashboardData] = useState({
     monthlyIncome: 537.00,
@@ -61,7 +63,7 @@ const DashboardPage = () => {
 
   const handleShowAllNewInvestments = () => {
     // Navigate to properties page to show new investment opportunities
-    window.location.href = '/properties';
+    router.push('/properties');
   };
 
   const handleBankAccountToggle = (option) => {
@@ -874,7 +876,7 @@ const DashboardPage = () => {
           
           <button 
             type="submit"
-            className="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 font-medium text-lg cursor-pointer transition-colors"
+            className="w-full bg-violet-900 text-white py-4 rounded-lg hover:bg-violet-700 font-medium text-lg cursor-pointer transition-colors"
           >
             Withdraw
           </button>
@@ -1375,12 +1377,12 @@ const DashboardPage = () => {
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-4 w-full">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-sm">R</span>
               </div>
               <span className="text-xl font-bold text-gray-900">Revest</span>
-            </div>
+            </Link>
             
             {/* Right side controls */}
             <div className="flex items-center space-x-4">

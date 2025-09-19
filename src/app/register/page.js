@@ -10,6 +10,7 @@ export default function RegisterPage() {
     userType: 'particular',
     firstName: '',
     lastName: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -41,6 +42,14 @@ export default function RegisterPage() {
 
     if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
+    }
+
+    if (!formData.username.trim()) {
+      newErrors.username = 'Username is required';
+    } else if (formData.username.length < 3) {
+      newErrors.username = 'Username must be at least 3 characters';
+    } else if (!/^[a-zA-Z0-9_]+$/.test(formData.username)) {
+      newErrors.username = 'Username can only contain letters, numbers, and underscores';
     }
 
     if (!formData.email.trim()) {
@@ -168,21 +177,38 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Email */}
-            <div>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors ${
-                  errors.email ? 'border-red-300' : 'border-gray-300'
-                }`}
-                placeholder="Enter your email"
-              />
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-              )}
+            {/* Email and Username */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleInputChange}
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors ${
+                    errors.username ? 'border-red-300' : 'border-gray-300'
+                  }`}
+                  placeholder="Username"
+                />
+                {errors.username && (
+                  <p className="mt-1 text-sm text-red-600">{errors.username}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors ${
+                    errors.email ? 'border-red-300' : 'border-gray-300'
+                  }`}
+                  placeholder="Enter your email"
+                />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
+              </div>
             </div>
 
             {/* Password Fields */}

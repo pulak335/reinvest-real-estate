@@ -97,13 +97,13 @@ const PropertyCard = ({ property }) => {
         <div className="flex gap-3">
           <button 
             onClick={handleInvestNow}
-            className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200"
+            className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
           >
             Invest Now
           </button>
           <button 
             onClick={handleDetails}
-            className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+            className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
           >
             Details
           </button>

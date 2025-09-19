@@ -1,29 +1,31 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/navigation';
 
 const ProtectedRoute = ({ children, requireAuth = true, redirectTo = '/login' }) => {
-  const { isAuthenticated, loading, checkAuth } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
   const router = useRouter();
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    checkAuth();
-  }, [checkAuth]);
+    // Mark as initialized after first render
+    setIsInitialized(true);
+  }, []);
 
   useEffect(() => {
-    if (!loading) {
+    if (isInitialized && !loading) {
       if (requireAuth && !isAuthenticated) {
         router.push(redirectTo);
       } else if (!requireAuth && isAuthenticated) {
         router.push('/dashboard');
       }
     }
-  }, [isAuthenticated, loading, requireAuth, redirectTo, router]);
+  }, [isAuthenticated, loading, requireAuth, redirectTo, router, isInitialized]);
 
   // Show loading spinner while checking authentication
-  if (loading) {
+  if (!isInitialized || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">

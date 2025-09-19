@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "propertyId": 1,
+    "title": "Modern Downtown Apartment",
+    "location": "Downtown, New York",
+    "totalValue": 850000,
+    "shareAmount": 200000,
+    "sharePercentage": 23.5,
+    "minimumInvestment": 25000,
+    "expectedReturn": 8.5,
+    "description": "Prime downtown location with excellent rental potential. Looking for investors to share this high-yield opportunity.",
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Gym", "Pool", "Parking", "Security"],
+    "propertyType": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1200,
+    "yearBuilt": 2020,
+    "ownerName": "John Smith",
+    "ownerContact": "john.smith@email.com",
+    "listingDate": "2024-01-15",
+    "status": "active",
+    "investorsNeeded": 3,
+    "currentInvestors": 1,
+    "features": [
+      "High rental yield potential",
+      "Prime location",
+      "Modern amenities",
+      "Professional management"
+    ]
+  },
+  {
+    "id": 2,
+    "propertyId": 2,
+    "title": "Luxury Beachfront Villa",
+    "location": "Miami Beach, Florida",
+    "totalValue": 1200000,
+    "shareAmount": 400000,
+    "sharePercentage": 33.3,
+    "minimumInvestment": 50000,
+    "expectedReturn": 12.0,
+    "description": "Stunning beachfront villa with vacation rental potential. Perfect for investors seeking luxury property exposure.",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Private Beach", "Pool", "Spa", "Concierge"],
+    "propertyType": "Villa",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 2800,
+    "yearBuilt": 2019,
+    "ownerName": "Maria Rodriguez",
+    "ownerContact": "maria.rodriguez@email.com",
+    "listingDate": "2024-01-20",
+    "status": "active",
+    "investorsNeeded": 4,
+    "currentInvestors": 2,
+    "features": [
+      "Beachfront location",
+      "Vacation rental income",
+      "Luxury amenities",
+      "High appreciation potential"
+    ]
+  },
+  {
+    "id": 3,
+    "propertyId": 3,
+    "title": "Commercial Office Building",
+    "location": "Business District, Chicago",
+    "totalValue": 2500000,
+    "shareAmount": 750000,
+    "sharePercentage": 30.0,
+    "minimumInvestment": 100000,
+    "expectedReturn": 10.5,
+    "description": "Prime commercial property with stable tenant base. Excellent opportunity for commercial real estate investment.",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking Garage", "Security", "Elevator", "Conference Rooms"],
+    "propertyType": "Commercial",
+    "bedrooms": 0,
+    "bathrooms": 8,
+    "area": 15000,
+    "yearBuilt": 2015,
+    "ownerName": "David Chen",
+    "ownerContact": "david.chen@email.com",
+    "listingDate": "2024-01-10",
+    "status": "active",
+    "investorsNeeded": 5,
+    "currentInvestors": 3,
+    "features": [
+      "Stable rental income",
+      "Prime business location",
+      "Long-term leases",
+      "Professional management"
+    ]
+  },
+  {
+    "id": 4,
+    "propertyId": 4,
+    "title": "Suburban Family Home",
+    "location": "Westfield, New Jersey",
+    "totalValue": 650000,
+    "shareAmount": 150000,
+    "sharePercentage": 23.1,
+    "minimumInvestment": 20000,
+    "expectedReturn": 7.5,
+    "description": "Beautiful family home in desirable suburban neighborhood. Great for rental income and long-term appreciation.",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Garden", "Garage", "Fireplace", "Deck"],
+    "propertyType": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 2200,
+    "yearBuilt": 2010,
+    "ownerName": "Sarah Johnson",
+    "ownerContact": "sarah.johnson@email.com",
+    "listingDate": "2024-01-25",
+    "status": "active",
+    "investorsNeeded": 2,
+    "currentInvestors": 0,
+    "features": [
+      "Family-friendly neighborhood",
+      "Good school district",
+      "Steady rental demand",
+      "Low maintenance"
+    ]
+  },
+  {
+    "id": 5,
+    "propertyId": 5,
+    "title": "Urban Loft Conversion",
+    "location": "SoHo, New York",
+    "totalValue": 950000,
+    "shareAmount": 300000,
+    "sharePercentage": 31.6,
+    "minimumInvestment": 40000,
+    "expectedReturn": 9.2,
+    "description": "Trendy loft in artistic neighborhood with high rental demand. Perfect for investors seeking urban exposure.",
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["High Ceilings", "Exposed Brick", "Rooftop Access", "Art Gallery"],
+    "propertyType": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1800,
+    "yearBuilt": 2018,
+    "ownerName": "Michael Brown",
+    "ownerContact": "michael.brown@email.com",
+    "listingDate": "2024-01-18",
+    "status": "active",
+    "investorsNeeded": 3,
+    "currentInvestors": 1,
+    "features": [
+      "Trendy neighborhood",
+      "Unique architecture",
+      "High rental yield",
+      "Cultural attractions nearby"
+    ]
+  },
+  {
+    "id": 6,
+    "propertyId": 6,
+    "title": "Mountain Cabin Retreat",
+    "location": "Aspen, Colorado",
+    "totalValue": 800000,
+    "shareAmount": 240000,
+    "sharePercentage": 30.0,
+    "minimumInvestment": 30000,
+    "expectedReturn": 11.0,
+    "description": "Charming mountain cabin with vacation rental potential. Seasonal income from ski tourism and summer activities.",
+    "images": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Fireplace", "Hot Tub", "Mountain Views", "Ski Access"],
+    "propertyType": "Cabin",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1600,
+    "yearBuilt": 2016,
+    "ownerName": "Lisa Wilson",
+    "ownerContact": "lisa.wilson@email.com",
+    "listingDate": "2024-01-22",
+    "status": "active",
+    "investorsNeeded": 4,
+    "currentInvestors": 2,
+    "features": [
+      "Vacation rental income",
+      "Ski resort proximity",
+      "Mountain recreation",
+      "Seasonal appreciation"
+    ]
+  }
+]

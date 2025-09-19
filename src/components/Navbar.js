@@ -27,23 +27,18 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mr-2">
                 <span className="text-white font-bold text-sm">R</span>
               </div>
               <span className="text-xl font-bold text-gray-900 font-heading">Revest</span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-
-              <Link href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
-                Home
-              </Link>
-
               <Link href="/properties" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Properties
               </Link>
@@ -57,6 +52,9 @@ const Navbar = () => {
                 List your property
               </Link>
               
+              <Link href="/property-share" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
+                Property Share
+              </Link>
               
               <Link href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium font-body">
                 Contact
@@ -159,6 +157,9 @@ const Navbar = () => {
             </Link>
             <Link href="/list-property" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               List your property
+            </Link>
+            <Link href="/property-share" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
+              Property Share
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-purple-600 block px-3 py-2 text-base font-medium">
               Contact
